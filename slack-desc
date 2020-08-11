@@ -1,0 +1,14 @@
+ipcalc: ipcalc (A modern IPv4/IPv6 ipcalc tool)
+ipcalc:
+ipcalc: Ipcalc is a modern tool to assist in network address calculations for
+ipcalc: IPv4 and IPv6. It acts both as a tool to output human readable
+ipcalc: information about a network or address, as well as a tool suitable to
+ipcalc: be used by scripts or other programs.
+ipcalc: It supports printing a summary about the provided network address,
+ipcalc: multiple command line options per information to be printed,
+ipcalc: transparent IPv6 support, and in addition it will use libGeoIP if
+ipcalc: available to provide geographic information.
+ipcalc: The project started as a fork of the ipcalc tool in the Fedora
+ipcalc: distribution, but it has since then replaced the original tool.
+ipcalc:
+ipcalc: Packaged by Georgi D. Sotirov <gdsotirov@gmail.com>
