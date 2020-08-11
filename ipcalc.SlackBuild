@@ -23,8 +23,8 @@
 . ../../slack-package.conf
 
 NAME=ipcalc
-VERSION=0.2.5
-ARCH=${ARCH:-i486}
+VERSION=0.4.1
+ARCH=${ARCH:-i586}
 BUILD=${BUILD:-1}
 
 TMP=${TMP:-/tmp}
@@ -58,7 +58,8 @@ fix_source
 CFLAGS="$SLKCFLAGS" \
 LIBPATH="/usr/lib${LIBDIRSUFFIX}" \
 make || exit 4
-make check || exit 5
+# Unit tests now only available when building using Meson and Ninja.
+#make check || exit 5
 
 # Manual install
 install -d -m 755 $PKG/usr/bin
@@ -70,6 +71,7 @@ install -m 644 $SRC/${NAME}.1 $PKG/usr/man/man1
 bin_perms $PKG
 ( cd $PKG; strip_bin )
 create_docs $PKG ${NAME}-${VERSION}
+( cd $PKG/usr/doc/${NAME}-${VERSION}; mv README.md README )
 gzip_man $PKG
 
 install -m 755 -d $PKG/install
