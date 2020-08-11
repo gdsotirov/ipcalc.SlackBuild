@@ -56,6 +56,7 @@ fix_source
 
 # Build & install
 CFLAGS="$SLKCFLAGS" \
+LIBPATH="/usr/lib${LIBDIRSUFFIX}" \
 make || exit 4
 make check || exit 5
 
